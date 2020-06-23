@@ -1,2 +1,5 @@
 jupyter
 numpy
+trimesh
+networkx
+pyrender
