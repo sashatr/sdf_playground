@@ -3,3 +3,7 @@ numpy
 trimesh
 networkx
 pyrender
+mesh-to-sdf
+scikit-image
+sklearn
+open3d
