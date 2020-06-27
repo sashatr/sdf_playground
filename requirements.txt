@@ -7,3 +7,6 @@ mesh-to-sdf
 scikit-image
 sklearn
 open3d
+torch
+matplotlib
+seaborn
