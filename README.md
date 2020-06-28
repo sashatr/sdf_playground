@@ -53,9 +53,9 @@ CNN2 output for Cube       |                            CNN2 output for Pyramid 
 --------------------------------------------------------------------------------------------------------------
 
 ### *Conclusions:*
- - Even the simplest fully-connected models with a small number of layers are able to simulate SFD functions
+ - Even the simplest fully-connected models with a small number of layers are able to simulate SFD functions.
  - One-dimensional convolution is an effective method for this task. Even without normalization, 
- it described the mesh well, and the weight of the model is less than the compressed files.
+ it describes the mesh well, and the weight of the model is less than the mesh file.
  - After a large number of experiments, such models will describe mesh objects well using less resources.
  - This is a great area for research ;)
 --------------------------------------------------------------------------------------------------------------
@@ -66,7 +66,7 @@ CNN2 output for Cube       |                            CNN2 output for Pyramid 
  - Parallelize inference models
  - More convolution network experiments
  - Add nn.BatchNorm1d
- - Using the same model for group mesh objects
+ - Use a model for group mesh objects
  - Etc
 
 --------------------------------------------------------------------------------------------------------------
