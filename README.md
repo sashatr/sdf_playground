@@ -2,12 +2,13 @@
 
 ### *Screenshots are added here for quick viewing of development and results*
 
-#ddcd
-![Alt text](images/chair.jpg?raw=true)
-#cdcd
-![Alt text](images/cube.jpg?raw=true)
-#cdcd
-![Alt text](images/pyramid.jpg?raw=true)
-#cdcd
-![Alt text](images/teddy.jpg?raw=true)
 
+
+
+chair           |  cube
+:-------------------------:|:-------------------------:
+![Alt text](images/chair.jpg?raw=true)  |  ![Alt text](images/cube.jpg?raw=true)
+
+pyramid           |  teddy
+:-------------------------:|:-------------------------:
+![Alt text](images/pyramid.jpg?raw=true)  |  ![Alt text](images/teddy.jpg?raw=true)

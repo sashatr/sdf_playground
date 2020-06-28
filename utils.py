@@ -2,6 +2,24 @@ import time
 
 import matplotlib.pyplot as plt
 import torch
+import numpy as np
+import seaborn as sns
+
+
+def sdf_colorize(sdf, n_colors):
+    cp = sns.color_palette("RdBu_r", n_colors=n_colors)
+    sns.palplot(cp)
+
+    range_ = (abs(np.amin(sdf)) + abs(np.amax(sdf))) / n_colors
+    colorv_v = [(range_ * i) + np.amin(sdf) for i in range(1, n_colors + 1)]
+    res_new = []
+
+    for r in sdf:
+        idx = np.searchsorted(colorv_v, r, side="left")
+        res_new.append(list(cp[idx]))
+
+    res_new = np.array(res_new)
+    return res_new
 
 
 def loss_graph(losses, net_list):
