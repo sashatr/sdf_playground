@@ -93,3 +93,46 @@ class ConvNet(torch.nn.Module):
         x = self.linear_layer(x)
         x = self.output_layer(x)
         return x
+
+
+class ConvNet2(torch.nn.Module):
+    def __init__(self):
+        super(ConvNet2, self).__init__()
+
+        self.input_layer1 = Conv1d(3, 10, 1)
+        self.max_pooling_layer = MaxPool1d(1)
+
+        self.conv_layer2 = Conv1d(10, 50, 1)
+        self.conv_layer3 = Conv1d(50, 50, 1)
+        self.flatten_layer = Flatten()
+        self.linear_layer = Linear(50, 50)
+        self.output_layer = Linear(50, 1)
+
+    def forward(self, x):
+        if len(x.size()) == 1:
+            n = 1
+        else:
+            n = x.size()[0]
+        x = x.reshape((n, 3, 1))
+
+        x = F.relu(self.input_layer1(x))
+        x = self.max_pooling_layer(x)
+
+        x = F.relu(self.conv_layer2(x))
+        x = self.max_pooling_layer(x)
+
+        x = F.relu(self.conv_layer3(x))
+        x = self.max_pooling_layer(x)
+
+        x = F.relu(self.conv_layer3(x))
+        x = self.max_pooling_layer(x)
+
+        x = F.relu(self.conv_layer3(x))
+        x = self.max_pooling_layer(x)
+
+        x = F.relu(self.conv_layer3(x))
+
+        x = self.flatten_layer(x)
+        x = self.linear_layer(x)
+        x = self.output_layer(x)
+        return x
